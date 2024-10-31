@@ -1,0 +1,131 @@
+<html>
+<head>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f7f2f2;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      color: #4a4a4a;
+    }
+
+    h1 {
+      font-size: 1.5em;
+      color: #ffba61;
+      text-shadow: 2px 2px 4px #cccccc;
+    }
+
+    a {
+      color: #ff6f61;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px;
+      border: 2px solid #ff6f61;
+      border-radius: 8px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    a:hover {
+      background-color: #ff6f61;
+      color: white;
+    }
+
+    h2, h3 {
+      color: #ff7f50;
+    }
+
+    img {
+      border: 5px solid #ffb6c1;
+      border-radius: 10px;
+      margin: 10px auto;
+    }
+
+    p {
+      font-size: 1.1em;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .choco{
+      font-size: 2.5em;
+      color: #ff6f61;
+      text-shadow: 2px 2px 4px #cccccc;
+    }
+  </style>
+      <link rel="shortcut icon" type="image/x-icon"
+      href="https://canvascctb.s3.ca-central-1.amazonaws.com/account_1/attachments/95/CCTB_favicon.ico" />
+  <script src="https://www.gstatic.com/firebasejs/4.5.2/firebase.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="https://matriz-teletrabajo-utc.web.app/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script src="js/culturalconnections.js"></script>
+  <script>
+    const app = firebase.initializeApp(firebaseConfig);
+</script>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Hello, I'm MegumiKushida. Welcome to my cultural connections page!</h1><br>
+    <img src="IMG_1CF589B03176-1.jpeg" alt="photo" width="320" height="400">
+
+    <div style="text-align: left;">
+
+    <h2>The top two cultural shocks I experienced when moving to Vancouver, Canada:</h2>
+    <ul>
+      <li>People Smile when you make eye contact as you pass by. </li>
+      <p>It's so happy things that I thought.In Japan,we just pass by and without eyecontact.
+      </p>
+      <li>Sushi.</li>
+      <p>Sushi in Canada and in Japan is so much defferent.</p>
+      <p>In Japan, sushi rolls usually have the nori (seaweed) on the outside, wrapping around the rice.</p>
+      <p>But in Western countries, sushi often has the seaweed inside, with the rice on the outside.</p>
+    </ul>
+   </div>
+
+    <div style="text-align: left;">
+    <h2>The top two things I miss most from my home country:</h2>
+    
+    <ul>
+      <li class="left-align">Of course,Japanese food..!</li>
+      <p>I like Japanese fresh sushi.And Japanese beef.</p>
+      <img src="IMG_F5C72A45B914-1.jpeg" alt="photo" width="100" height="90">
+      <p>I want to eat Japanese beef.And I can ,but In Canada,It's too expensive and not freash..</p>
+
+      <li>I miss my dog..</li>
+      <img src="PHOTO-2024-08-02-19-54-17.jpg" alt="photo" width="100" height="120">
+    </ul>
+  </div>
+  <div style="text-align: left;">
+    <h2>The most amazing new things I love about Vancouver or Canada in general:</h2>
+    <ul>
+      <li>Canada is multicultural.So I can see many people from other country and eat defferent type of food.
+      </li>
+      <li>People always say Thank you and sorry.</li>
+      <p>Compare to Japan,We say sorry a lot,but we often hesitate to say thank you.</p>
+      <p>To say thank you often is so good thing I think.</p>
+    </ul>
+  </div>
+  <div style="text-align: left;">
+    <h2>My top personal goal or objective at this stage in my life:</h2>
+    <ol>
+      <li>I want to work as a backend developer in Canada.</li>
+      <p>I worked as a backend engineer in Japan,But I wanted to change the environment.</p>
+      <p>And also,I lilke backend language.And I'd like to work Developing country.</p>
+      <li>I am studying at CCTB to improve my skills and increase my chances of getting a job in Canada.</li>
+    </ol>
+  </div>
+  <div class="col-lg-12">
+    <a id="sign-out" class="btn bg-danger mt-4 text-white w-100" href="#">Sign Out</a>
+  </div>
+  </div>
+
+</body>
+</html>
