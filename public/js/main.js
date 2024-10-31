@@ -64,58 +64,58 @@ window.addEventListener('load', function () {
                 console.log('Logging fail', error);
             });
     });
-    // document.getElementById('sign-in-phone').addEventListener('click', function () {
+    document.getElementById('sign-in-phone').addEventListener('click', function () {
 
-    //     const phoneNumber = +1 + document.getElementById('phone').value;
-    //     const appVerifier = window.recaptchaVerifier;
-    //     firebase.auth().signInWithPhoneNumber(phoneNumber, appVerifier)
-    //         .then((confirmationResult) => {
-    //           // SMS sent. Prompt user to type the code from the message, then sign the
-    //           // user in with confirmationResult.confirm(code).
-    //           window.confirmationResult = confirmationResult;
-    //           alert("SMS sent");
+        const phoneNumber = +1 + document.getElementById('phone').value;
+        const appVerifier = window.recaptchaVerifier;
+        firebase.auth().signInWithPhoneNumber(phoneNumber, appVerifier)
+            .then((confirmationResult) => {
+              // SMS sent. Prompt user to type the code from the message, then sign the
+              // user in with confirmationResult.confirm(code).
+              window.confirmationResult = confirmationResult;
+              alert("SMS sent");
 
-    //           // ...
-    //         }).catch((error) => {
-    //             let errorCode = error.code;
-    //             let errorMessage = error.message;
-    //             alert('Logging fail');
-    //             console.log('Logging fail', errorMessage);
-    //         });
-    // });
-    // function recaptchaRender() {
-    //     /** @type {firebase.auth.RecaptchaVerifier} */
-    //     const recaptchaVerifier = window.recaptchaVerifier;
+              // ...
+            }).catch((error) => {
+                let errorCode = error.code;
+                let errorMessage = error.message;
+                alert('Logging fail');
+                console.log('Logging fail', errorMessage);
+            });
+    });
+    function recaptchaRender() {
+        /** @type {firebase.auth.RecaptchaVerifier} */
+        const recaptchaVerifier = window.recaptchaVerifier;
       
-    //     // [START auth_phone_recaptcha_render]
-    //     recaptchaVerifier.render().then((widgetId) => {
-    //       window.recaptchaWidgetId = widgetId;
-    //     });
-    //     // [END auth_phone_recaptcha_render]
-    //   }
+        // [START auth_phone_recaptcha_render]
+        recaptchaVerifier.render().then((widgetId) => {
+          window.recaptchaWidgetId = widgetId;
+        });
+        // [END auth_phone_recaptcha_render]
+      }
 
-    // document.getElementById('verifyCode').addEventListener('click', function () {
-    //     const code = document.getElementById('passCode').value;
-    //     confirmationResult.confirm(code).then((result) => {
-    //       // User signed in successfully.
-    //       const user = result.user;
-    //       console.log('Logging sucessfully');
-    //       alert('Logging sucessfully');
-    //       location.href = 'culturalconnections.html';
-    //     }).catch((error) => {
-    //         let errorCode = error.code;
-    //         let errorMessage = error.message;
-    //         alert('Logging fail');
-    //         console.log('Logging fail', errorMessage);
-    //     });
-    //     // [END auth_phone_verify_code]
-    // });
-    // function getRecaptchaResponse() {
-    //     const recaptchaWidgetId = "...";
-    //     const grecaptcha = {};
+    document.getElementById('verifyCode').addEventListener('click', function () {
+        const code = document.getElementById('passCode').value;
+        confirmationResult.confirm(code).then((result) => {
+          // User signed in successfully.
+          const user = result.user;
+          console.log('Logging sucessfully');
+          alert('Logging sucessfully');
+          location.href = 'culturalconnections.html';
+        }).catch((error) => {
+            let errorCode = error.code;
+            let errorMessage = error.message;
+            alert('Logging fail');
+            console.log('Logging fail', errorMessage);
+        });
+        // [END auth_phone_verify_code]
+    });
+    function getRecaptchaResponse() {
+        const recaptchaWidgetId = "...";
+        const grecaptcha = {};
       
-    //     // [START auth_get_recaptcha_response]
-    //     const recaptchaResponse = grecaptcha.getResponse(recaptchaWidgetId);
-    //     // [END auth_get_recaptcha_response]
-    //   }
+        // [START auth_get_recaptcha_response]
+        const recaptchaResponse = grecaptcha.getResponse(recaptchaWidgetId);
+        // [END auth_get_recaptcha_response]
+      }
 });
